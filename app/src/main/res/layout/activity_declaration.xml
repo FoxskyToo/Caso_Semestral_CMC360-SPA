@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FAFC"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisar y Declarar Componentes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Datos Básicos del Levantamiento -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:hint="Identificador (ej. Rack 01)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRackName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rack 01" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:hint="Ubicación (ej. Sala A)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sala A" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- Vista Previa de Evidencia Fotográfica -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/ivRackPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="#E2E8F0" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Lista de Componentes Declarados -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComponents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <!-- Botón Agregar Componente -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddCategory"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="+ Agregar componente"
+        android:textSize="15sp"
+        android:textColor="#0066FF"
+        app:strokeColor="#0066FF"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Botón Validar y Guardar -->
+    <Button
+        android:id="@+id/btnValidateAndSave"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Validar y guardar"
+        android:textSize="16sp"
+        android:backgroundTint="#0066FF"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

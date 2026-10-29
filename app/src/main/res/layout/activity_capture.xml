@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="20dp">
+
+    <!-- Título superior -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona una imagen"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Previsualización de la imagen -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:background="#F1F5F9" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón Tomar Foto -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Tomar foto"
+        android:textSize="15sp"
+        android:backgroundTint="#0066FF"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconGravity="textStart"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Botón Seleccionar de Galería -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSelectGallery"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Seleccionar de galería"
+        android:textSize="15sp"
+        android:textColor="#0066FF"
+        app:strokeColor="#0066FF"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:iconTint="#0066FF"
+        app:iconGravity="textStart"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón Continuar (se habilita tras elegir imagen) -->
+    <Button
+        android:id="@+id/btnContinueToDeclaration"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Continuar a la declaración"
+        android:textSize="15sp"
+        android:enabled="false"
+        android:backgroundTint="#10B981"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

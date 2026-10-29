@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:tint="#10B981"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Registro guardado!"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El levantamiento se ha guardado correctamente."
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="#64748B"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/btnGoToHistory"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Ver en historial"
+        android:textSize="16sp"
+        android:backgroundTint="#0066FF"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToHome"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Volver al inicio"
+        android:textSize="16sp"
+        android:textColor="#0066FF"
+        app:strokeColor="#0066FF"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>
